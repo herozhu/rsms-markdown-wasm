@@ -40,6 +40,13 @@ module({ ...m,
   embed:   true,
 })
 
+module({ ...m,
+  name:   "markdown-bundle-es",
+  out:    outdir + "/markdown.bundle.es.js",
+  embed:  true,
+  format: "es",
+})
+
 if (!debug) {
   // sideloaded wasm, universal js library, exports API at global["markdown"] as a fallback
   // Suitable as a runtime library in browsers
